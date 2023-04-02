@@ -16,13 +16,13 @@ app.use('/user',userRouter);
 
 app.use("/doctor",doctorRouter)
 
+app.get('/',(req,res)=>{
+    res.send("Server is Working")
+})
 app.use(authenticator)
 
 app.use("/appointment",AppointmentRouter)
 
-app.get('/',(req,res)=>{
-    res.send("Server is Working")
-})
 
 
 
